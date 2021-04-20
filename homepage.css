@@ -1,0 +1,437 @@
+@font-face {
+    font-family: "Le Murmure";
+    src: url("./assets/le-murmure.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Space Mono Bold";
+    src: url("./assets/SpaceMono-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Space Mono Regular";
+    src: url("./assets/SpaceMono-Regular.ttf") format("truetype");
+  }
+
+body {
+    background-color: #35343C; 
+   background-image: url("assets/bgimage.jpeg");
+    font-family: "Space Mono Bold";
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .crystal-container {
+     padding: 1rem;
+     border: 1.5px solid black;
+     border-radius: 0px; 
+    width: 450px;
+    height: 450px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  
+  } 
+  
+  .crystal-image {
+    width: 300px;
+    mix-blend-mode: multiply;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  
+  .container {
+    width: 100%;
+  /* background: lightpink; */
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    grid-gap: 0rem;
+  }
+  .filter {
+    position: absolute;
+    float: left;
+  /* border: 1px solid black;  */
+    height: 20rem;
+    width: 24rem;
+    top: 8rem;
+    padding: 3rem;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.1rem;
+    
+  }
+  
+  
+  img {
+    width: 100px;
+  }
+  .crystalone {
+    position: absolute;
+    left: 450px;
+    top: 50px;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 5000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear; 
+  }
+  
+  .crystaltwo {
+    position: absolute;
+    right: 450px;
+    top: 60px;
+    -webkit-animation-name: spintwo;
+    -webkit-animation-duration: 5000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear; 
+  }
+  
+  @-webkit-keyframes spin {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+  }
+  
+  @-webkit-keyframes spintwo {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(-360deg);
+      }
+  }
+  
+  
+  h2 {
+    font-family: "Le Murmure";
+    font-weight: 500;
+    text-align: center;
+    padding-top: 0rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    font-size: 5rem;
+    color: white;
+  }
+  
+  .shimmer {
+    display: inline-block;
+    color:#b4b4b4;
+    
+    background: #b4b4b4 -webkit-gradient(linear, 100% 0, 0 0, from(#b4b4b4), color-stop(0, white), to(#b4b4b4));
+    
+    background-position: -7rem top; /*50px*/
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation-name: shimmer;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-background-size: 7rem 100%; /*50px*/
+    
+  }
+  
+  @-webkit-keyframes shimmer {
+      0% {
+          background-position: -7rem top; /*50px*/
+      }
+  
+      70% {
+          background-position: 12.5rem top; /*200px*/
+      }
+  
+      100% {
+          background-position: 14rem top; /*200px*/
+      }
+  }
+  /* .heading {
+   border: 1px solid #35343C; 
+    width: 100%;
+    background-color: #35343C;
+  } */
+  
+  .crystal-title {
+   text-align: center;
+    margin-bottom: 0px;
+  }
+  
+  .crystal-meaning {
+    text-align: center;
+    font-family: "Space Mono Regular";
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+  
+  /* .js-brown {
+    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: brown;
+  }
+  
+  .js-red {
+    border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: red;
+  }
+  
+  .js-green {
+    border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: green;
+  }
+  
+  .js-purple {
+    border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: purple;
+  }
+  
+  .js-orange {
+   border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: orange;
+  }
+  
+  .js-blue {
+    border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: blue;
+  }
+  
+  .js-black {
+    border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: black;
+  }
+  
+  .js-yellow {
+     border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: yellow;
+  }
+  
+  .js-grey {
+     border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: grey;
+  }
+  
+  .js-white {
+     border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: white;
+  }
+  
+  .js-pink {
+  border: 1px solid black; 
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: pink;
+  }
+  
+  .js-reset {
+    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+    border-radius: 0px;
+    background-color: brown;
+    
+  }
+  
+  .js-brown:hover {
+    border: 1px solid white;
+  }
+  
+  .js-red:hover {
+    border: 1px solid white;
+  }
+  
+  .js-orange:hover {
+    border: 1px solid white;
+  }
+  
+  .js-yellow:hover {
+    border: 1px solid white;
+  }
+  
+  .js-green:hover {
+    border: 1px solid white;
+  }
+  
+  .js-purple:hover {
+    border: 1px solid white;
+  }
+  
+  .js-blue:hover {
+    border: 1px solid white;
+  }
+  
+  .js-black:hover {
+    border: 1px solid white;
+  }
+  
+  .js-white:hover {
+    border: 1px solid white;
+  }
+  
+  .js-grey:hover {
+    border: 1px solid white;
+  }
+  
+  .js-pink:hover {
+    border: 1px solid white;
+  }
+  
+  .js-reset:hover {
+    border: 1px solid white;
+  }
+   */
+  
+  .long-arrow-right,
+  .long-arrow-left{
+    display: block;
+    margin: 80px auto;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+  }
+  .arrow-right,
+  .long-arrow-right{
+   transform: rotate(135deg);
+  }
+  
+  .arrow-left,
+  .long-arrow-left{
+   transform: rotate(-45deg);
+  }
+  .long-arrow-right::after,
+  .long-arrow-left::after{
+    content: "";
+    display: block;
+    width: 2px;
+    height: 45px;
+    background-color: white;
+    transform: rotate(-45deg) translate(15px, 4px);
+    left: 0;
+    top: 0;
+  }
+  
+  .long-arrow-right {
+    position: absolute;
+    float: right;
+    right: 2rem;
+  }
+  
+  .long-arrow-left {
+    position: absolute;
+    float: left;
+    left: 2rem;
+  }
+  
+  
+  
+  .crystal-container:hover {
+    background-color: white;
+  }
+  
+  .container:hover .crystal-container{ 
+    filter:blur(2px);
+    opacity:.7;
+    transform: scale(1);
+    box-shadow:none;
+    mix-blend-mode: multiply;
+    border: 1.5px solid white;
+  }
+  
+  .container:hover .crystal-container:hover{
+    transform:scale(1);
+    filter:blur(0px);
+    opacity:1;
+    mix-blend-mode: initial;
+    border: 1.5px solid white;
+  }
+  
+  /* mobile */
+@media only screen and (max-width: 50rem) {
+
+    .crystal-container {
+        padding: 1rem;
+        border: 1.5px solid black;
+        border-radius: 0px; 
+       width: 95px;
+       height: 100px;
+       padding-top: 1rem;
+       padding-bottom: 2rem;
+     
+     } 
+     
+     .crystal-image {
+       width: 55px;
+       padding-left: 0rem;
+       padding-right: 0rem;
+     }
+ 
+     
+     img {
+       width: 40px;
+     }
+     .crystalone {
+       position: absolute;
+       left: 290px;
+       top: 60px;
+     }
+     
+     .crystaltwo {
+       position: absolute;
+       right: 290px;
+       top: 70px;
+     }
+     
+     
+     h2 {
+       padding-top: 0rem;
+       margin-bottom: 2rem;
+       margin-top: 4rem;
+       font-size: 2rem;
+     }
+     
+     
+     
+     .crystal-title {
+        font-size: .7rem;
+     }
+     
+     .crystal-meaning {
+       font-size: .4rem;
+     } 
+  
+  .filter { 
+  height: 2rem;
+  width: 2rem;
+  
+}
+}
+  
